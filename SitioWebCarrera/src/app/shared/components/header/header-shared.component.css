@@ -3,22 +3,49 @@
   padding: 12px 0;
 }
 
+/* Contenedor */
 .header-content {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
+/* Logo + texto */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Logo */
+.header-logo {
+  height: 48px;
+  width: auto;
+}
+
+/* Texto */
 .header-title {
-  font-size: 1.4rem;
   margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #212529;
 }
 
 .header-subtitle {
+  margin-top: 2px;
   font-size: 0.85rem;
-  margin-top: 4px;
+  color: #495057;
 }
+
+/* Mobile */
 @media (max-width: 768px) {
-  .header-institucional {
-    padding: 8px 0;
+  .header-brand {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .header-logo {
+    height: 42px;
   }
 
   .header-title {
@@ -28,5 +55,4 @@
   .header-subtitle {
     font-size: 0.8rem;
   }
-
 }
