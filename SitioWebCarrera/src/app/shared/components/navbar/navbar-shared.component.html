@@ -1,7 +1,10 @@
 <!-- Franja institucional superior -->
 <div class="top-bar-institucional"></div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-white border-bottom navbar-sticky"
+  [class.scrolled]="isScrolled"
+>
   <div class="container">
 
     <!-- Logo -->

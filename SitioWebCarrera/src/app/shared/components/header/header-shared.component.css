@@ -1,0 +1,31 @@
+.header-institucional {
+  background-color: #f8f9fa;
+  padding: 12px 0;
+}
+
+.header-content {
+  text-align: center;
+}
+
+.header-title {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.header-subtitle {
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+@media (max-width: 768px) {
+  .header-institucional {
+    padding: 8px 0;
+  }
+
+  .header-title {
+    font-size: 1.2rem;
+  }
+
+  .header-subtitle {
+    font-size: 0.8rem;
+  }
+}
