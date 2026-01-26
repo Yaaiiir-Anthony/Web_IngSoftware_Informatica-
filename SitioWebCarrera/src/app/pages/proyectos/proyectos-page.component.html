@@ -9,33 +9,47 @@
   </div>
 </section>
 
-<!-- Filtros -->
-<section class="bg-white border-bottom py-3">
-  <div class="container d-flex flex-wrap gap-2">
-    <button class="btn btn-dark">Todos</button>
-    <button class="btn btn-light">Software</button>
-    <button class="btn btn-light">Inteligencia Artificial</button>
-    <button class="btn btn-light">Sistemas Inteligentes</button>
+<!-- CONTENEDOR ÚNICO (IMPORTANTE) -->
+<section class="container py-5 project-filter">
+
+  <!-- ================= RADIOS OCULTOS ================= -->
+  <input type="radio" name="filter" id="filter-all" checked>
+  <input type="radio" name="filter" id="filter-software">
+  <input type="radio" name="filter" id="filter-sistemas">
+
+  <!-- ================= FILTROS ================= -->
+  <div class="d-flex flex-wrap gap-2 filters mb-4">
+
+    <label for="filter-all" class="btn btn-light">
+      Todos
+    </label>
+
+    <label for="filter-software" class="btn btn-light">
+      Desarrollo de Software
+    </label>
+
+    <label for="filter-sistemas" class="btn btn-light">
+      Sistemas Inteligentes
+    </label>
+
   </div>
-</section>
 
-<!-- Cards -->
-<section class="container py-5">
-  <div class="row g-4">
+  <!-- ================= CARDS ================= -->
+  <div class="row g-4 projects">
 
-    <!-- Card 1 -->
-    <div class="col-12 col-md-6 col-lg-4 project-item" data-category="sistemas">
+    <!-- SISTEMAS -->
+    <div class="col-12 col-md-6 col-lg-4 project-item sistemas">
       <div class="card project-card">
         <div class="card-img-top-wrapper">
           <img src="assets/img/proy1.jpeg" alt="Carrito Arduino">
         </div>
-
         <div class="card-body">
           <span class="card-category">Sistemas Inteligentes</span>
-          <h5 class="card-title fw-semibold">Carrito Autónomo con Arduino</h5>
+          <h5 class="card-title fw-semibold">
+            Carrito Autónomo con Arduino
+          </h5>
           <p class="card-text text-muted small">
-            Vehículo a escala controlado por Arduino, con sensores para evitar obstáculos
-            y desplazarse de forma autónoma.
+            Vehículo a escala controlado por Arduino con sensores inteligentes.
           </p>
           <a href="#" class="btn btn-dark-custom w-100 btn-sm">
             Ver Más
@@ -44,18 +58,19 @@
       </div>
     </div>
 
-    <!-- Card 2 -->
-    <div class="col-12 col-md-6 col-lg-4 project-item" data-category="software">
+    <!-- SOFTWARE -->
+    <div class="col-12 col-md-6 col-lg-4 project-item software">
       <div class="card project-card">
         <div class="card-img-top-wrapper">
           <img src="assets/img/proy2.jpg" alt="Medidor de Presión">
         </div>
         <div class="card-body">
-          <span class="card-category">Software</span>
-          <h5 class="card-title fw-semibold">Medidor de Presión con Gráficas</h5>
+          <span class="card-category">Desarrollo de Software</span>
+          <h5 class="card-title fw-semibold">
+            Medidor de Presión con Gráficas
+          </h5>
           <p class="card-text text-muted small">
-            Sistema de medición de presión que registra datos en tiempo real
-            y los presenta mediante gráficas interactivas.
+            Sistema de medición con visualización gráfica en tiempo real.
           </p>
           <a href="#" class="btn btn-dark-custom w-100 btn-sm">
             Ver Más
@@ -64,18 +79,82 @@
       </div>
     </div>
 
-    <!-- Card 3 -->
-    <div class="col-12 col-md-6 col-lg-4 project-item" data-category="ia">
+    <!-- SISTEMAS -->
+    <div class="col-12 col-md-6 col-lg-4 project-item sistemas">
       <div class="card project-card">
         <div class="card-img-top-wrapper">
           <img src="assets/img/proy3.jpg" alt="Sensor de Personas">
         </div>
         <div class="card-body">
-          <span class="card-category">Inteligencia Artificial</span>
-          <h5 class="card-title fw-semibold">Sensor para Detección de Personas</h5>
+          <span class="card-category">Sistemas Inteligentes</span>
+          <h5 class="card-title fw-semibold">
+            Sensor de Detección de Personas
+          </h5>
           <p class="card-text text-muted small">
-            Sistema basado en sensores y algoritmos inteligentes para detectar
-            la presencia de personas en un área determinada.
+            Sensor inteligente para detección de presencia humana.
+          </p>
+          <a href="#" class="btn btn-dark-custom w-100 btn-sm">
+            Ver Más
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SISTEMAS -->
+    <div class="col-12 col-md-6 col-lg-4 project-item sistemas">
+      <div class="card project-card">
+        <div class="card-img-top-wrapper">
+          <img src="assets/img/proy1.jpeg" alt="Carrito Arduino">
+        </div>
+        <div class="card-body">
+          <span class="card-category">Sistemas Inteligentes</span>
+          <h5 class="card-title fw-semibold">
+            Carrito Autónomo con Arduino
+          </h5>
+          <p class="card-text text-muted small">
+            Vehículo a escala controlado por Arduino con sensores inteligentes.
+          </p>
+          <a href="#" class="btn btn-dark-custom w-100 btn-sm">
+            Ver Más
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOFTWARE -->
+    <div class="col-12 col-md-6 col-lg-4 project-item software">
+      <div class="card project-card">
+        <div class="card-img-top-wrapper">
+          <img src="assets/img/proy2.jpg" alt="Medidor de Presión">
+        </div>
+        <div class="card-body">
+          <span class="card-category">Desarrollo de Software</span>
+          <h5 class="card-title fw-semibold">
+            Medidor de Presión con Gráficas
+          </h5>
+          <p class="card-text text-muted small">
+            Sistema de medición con visualización gráfica en tiempo real.
+          </p>
+          <a href="#" class="btn btn-dark-custom w-100 btn-sm">
+            Ver Más
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOFTWARE -->
+    <div class="col-12 col-md-6 col-lg-4 project-item software">
+      <div class="card project-card">
+        <div class="card-img-top-wrapper">
+          <img src="assets/img/proy3.jpg" alt="Medidor de Presión">
+        </div>
+        <div class="card-body">
+          <span class="card-category">Desarrollo de Software</span>
+          <h5 class="card-title fw-semibold">
+            Medidor de Presión con Gráficas
+          </h5>
+          <p class="card-text text-muted small">
+            Sistema de medición con visualización gráfica en tiempo real.
           </p>
           <a href="#" class="btn btn-dark-custom w-100 btn-sm">
             Ver Más
@@ -86,4 +165,3 @@
 
   </div>
 </section>
-

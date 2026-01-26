@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 @Component({
   selector: 'proyecto',
@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./proyectos-page.component.css']
 })
 
-export class ProyectoPageComponent {}
+export class ProyectoPageComponent {
+
+}
+
