@@ -99,6 +99,33 @@ input[type="radio"] {
 #tab3:checked ~ .content-3 {
     display: block;
 }
+#tab4:checked ~ .content-4 {
+    display: block;
+}
+
+#tab5:checked ~ .content-5 {
+    display: block;
+}
+
+#tab6:checked ~ .content-6 {
+    display: block;
+}
+#tab7:checked ~ .content-7 {
+    display: block;
+}
+
+#tab8:checked ~ .content-8 {
+    display: block;
+}
+
+#tab9:checked ~ .content-9 {
+    display: block;
+}
+#tabop:checked ~ .content-optativas {
+    display: block;
+}
+
+
 
 /* Estilo de cada pestaña */
 .tab {
@@ -114,7 +141,14 @@ input[type="radio"] {
 /* Estilo de la pestaña activa */
 #tab1:checked ~ .tabs label[for="tab1"],
 #tab2:checked ~ .tabs label[for="tab2"],
-#tab3:checked ~ .tabs label[for="tab3"] {
+#tab3:checked ~ .tabs label[for="tab3"],
+#tab4:checked ~ .tabs label[for="tab4"],
+#tab5:checked ~ .tabs label[for="tab5"],
+#tab6:checked ~ .tabs label[for="tab6"],
+#tab7:checked ~ .tabs label[for="tab7"],
+#tab8:checked ~ .tabs label[for="tab8"],
+#tab9:checked ~ .tabs label[for="tab9"],
+#tabop:checked ~ .tabs label[for="tabop"] {
     color: #85272d;
     border-bottom: 3px solid #85272d;
 }
