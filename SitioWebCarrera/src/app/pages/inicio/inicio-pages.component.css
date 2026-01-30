@@ -41,14 +41,11 @@ body {
 /* --- 2. HERO SECTION --- */
 .hero {
     height: 600px;
-<<<<<<< HEAD
+
     width: 100%;
-    background: linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)), url('/assets/img/FondoUistmo.png');
-=======
-    background:
-        linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)),
-        url('../../../assets/img/FondoUistmo.png');
->>>>>>> 0f95015bf269a6020f964ba870ad9bd3157b503e
+    background: linear-gradient(rgba(10, 25, 47, 0.6), rgba(10, 25, 47, 0.6)),
+     url('/assets/img/FondoUistmo.png');
+
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
