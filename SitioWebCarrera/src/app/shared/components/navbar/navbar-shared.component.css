@@ -79,7 +79,7 @@
 }
 /* Control del tamaño del logo */
 .logo-img {
-  height: 50px; /* Ajusta este valor según el tamaño deseado */
+  height: 70px; /* Ajusta este valor según el tamaño deseado */
   width: auto;  /* Mantiene la proporción */
   transition: transform 0.3s ease;
 }
