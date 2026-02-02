@@ -1,25 +1,36 @@
 import { Component, HostListener } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router, NavigationEnd, RouterModule } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar-shared',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterModule],
   templateUrl: './navbar-shared.component.html',
-  styleUrls: ['./navbar-shared.component.css'],
+  styleUrls: ['./navbar-shared.component.css']
 })
 export class NavbarSharedComponent {
 
   isScrolled = false;
 
-  constructor(public router: Router) {}
+  constructor(private router: Router) {
+    // Cerrar menú al navegar
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        const navbar = document.getElementById('navbarInstitucional');
+        if (navbar?.classList.contains('show')) {
+          navbar.classList.remove('show');
+        }
+      });
+  }
 
   isActive(path: string): boolean {
     return this.router.url === path;
   }
 
   @HostListener('window:scroll', [])
-  onWindowScroll(): void {
-    this.isScrolled = window.scrollY > 10;
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 20;
   }
 }
