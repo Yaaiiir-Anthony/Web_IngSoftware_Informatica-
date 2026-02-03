@@ -98,8 +98,19 @@
           </li>
 
         </ul>
+        <div class="idiomas">
+        <button
+          (click)="cambiarIdioma('es')"
+          [class.active]="translationService.currentLang() === 'es'">
+          Español
+        </button>
 
-
+        <button
+          (click)="cambiarIdioma('zapoteco')"
+          [class.active]="translationService.currentLang() === 'zapoteco'">
+          Zapoteco
+        </button>
+      </div>
     </div>
   </div>
 </nav>

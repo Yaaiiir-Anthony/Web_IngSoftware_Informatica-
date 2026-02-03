@@ -1,15 +1,20 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { CommonModule } from '@angular/common';
+import { TranslationService } from '../../../services/translation.service'; // Ruta desde navbar
 
 @Component({
   selector: 'app-navbar-shared',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './navbar-shared.component.html',
   styleUrls: ['./navbar-shared.component.css']
 })
 export class NavbarSharedComponent {
+
+  // 🌎 Servicio de traducción
+  translationService = inject(TranslationService);
 
   isScrolled = false;
 
@@ -25,6 +30,11 @@ export class NavbarSharedComponent {
       });
   }
 
+  // 🌐 Método para cambiar idioma
+  cambiarIdioma(lang: string) {
+    this.translationService.changeLanguage(lang);
+  }
+
   isActive(path: string): boolean {
     const currentRoute = this.router.url;
 
@@ -38,7 +48,6 @@ export class NavbarSharedComponent {
       );
     }
 
-    // Para el resto de los botones (Docentes, Proyectos, etc.)
     return currentRoute === path;
   }
 
