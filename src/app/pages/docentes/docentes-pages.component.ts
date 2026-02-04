@@ -3,7 +3,7 @@ import { Component, signal } from '@angular/core';
 // Interfaz para las publicaciones científicas
 interface Publicacion {
   titulo: string;
-  año: number;
+  anio: number;
   enlace: string;
 }
 
@@ -40,8 +40,8 @@ export class DocentesPageComponent {
       email: 'juan.perez@unistmo.edu.mx',
       telefono: '+52 (971) 123-4567',
       publicaciones: [
-        { titulo: 'Optimización de Algoritmos Genéticos', año: 2023, enlace: 'https://scholar.google.com' },
-        { titulo: 'IA Aplicada a la Medicina Regional', año: 2022, enlace: '#' }
+        { titulo: 'Optimización de Algoritmos Genéticos', anio: 2023, enlace: 'https://scholar.google.com' },
+        { titulo: 'IA Aplicada a la Medicina Regional', anio: 2022, enlace: '#' }
       ]
     },
     {
@@ -53,8 +53,8 @@ export class DocentesPageComponent {
       email: 'maria.lopez@unistmo.edu.mx',
       telefono: '+52 (971) 987-6543',
       publicaciones: [
-        { titulo: 'Microservicios en la Nube: Un Enfoque Práctico', año: 2024, enlace: '#' },
-        { titulo: 'Metodologías Ágiles en la Educación Superior', año: 2021, enlace: '#' }
+        { titulo: 'Microservicios en la Nube: Un Enfoque Práctico', anio: 2024, enlace: '#' },
+        { titulo: 'Metodologías Ágiles en la Educación Superior', anio: 2021, enlace: '#' }
       ]
     },
     {
@@ -66,7 +66,7 @@ export class DocentesPageComponent {
       email: 'carlos.ramirez@unistmo.edu.mx',
       telefono: '+52 (971) 456-7890',
       publicaciones: [
-        { titulo: 'Automatización de Procesos con IoT', año: 2023, enlace: '#' }
+        { titulo: 'Automatización de Procesos con IoT', anio: 2023, enlace: '#' }
       ]
     },
     {
@@ -78,8 +78,8 @@ export class DocentesPageComponent {
       email: 'ana.martinez@unistmo.edu.mx',
       telefono: '+52 (971) 111-2222',
       publicaciones: [
-        { titulo: 'Big Data en Entornos de Baja Conectividad', año: 2022, enlace: '#' },
-        { titulo: 'Seguridad en Transacciones Distribuidas', año: 2020, enlace: '#' }
+        { titulo: 'Big Data en Entornos de Baja Conectividad', anio: 2022, enlace: '#' },
+        { titulo: 'Seguridad en Transacciones Distribuidas', anio: 2020, enlace: '#' }
       ]
     },
     {
@@ -91,7 +91,7 @@ export class DocentesPageComponent {
       email: 'roberto.sanchez@unistmo.edu.mx',
       telefono: '+52 (971) 333-4444',
       publicaciones: [
-        { titulo: 'Análisis de Vulnerabilidades en Redes Locales', año: 2023, enlace: '#' }
+        { titulo: 'Análisis de Vulnerabilidades en Redes Locales', anio: 2023, enlace: '#' }
       ]
     },
     {
@@ -103,7 +103,7 @@ export class DocentesPageComponent {
       email: 'laura.gonzalez@unistmo.edu.mx',
       telefono: '+52 (971) 555-6666',
       publicaciones: [
-        { titulo: 'Control de Calidad en Startups Tecnológicas', año: 2024, enlace: '#' }
+        { titulo: 'Control de Calidad en Startups Tecnológicas', anio: 2024, enlace: '#' }
       ]
     }
   ]);
