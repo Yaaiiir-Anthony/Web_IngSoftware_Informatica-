@@ -18,14 +18,13 @@
   </div>
 
   <main class="main-content">
-    <section class="hero">
-      <div>
-        <h1 class="hero-title">Innovación tecnológica con sentido humano</h1>
-        <a href="https://www.unistmo.edu.mx/web/p_ensenanza/escolares.html" target="_blank">
-          <button class="btn-hero">Inicia tu proceso de ingreso aquí</button>
-        </a>
-      </div>
-    </section>
+   <section class="hero">
+  <div class="hero-inner"> <h1 class="hero-title">Innovación tecnológica con sentido humano</h1>
+    <a href="https://www.unistmo.edu.mx/web/p_ensenanza/escolares.html" target="_blank">
+      <button class="btn-hero">Inicia tu proceso de ingreso aquí</button>
+    </a>
+  </div>
+</section>
 
     <section class="container">
       <div class="grid-cards">
@@ -58,22 +57,27 @@
 </section>
   </main>
 </div>
-
 <div class="contact-modal-overlay" *ngIf="isContactModalVisible" (click)="toggleContactModal()">
   <div class="contact-modal-card" (click)="$event.stopPropagation()">
     <button class="close-modal-x" (click)="toggleContactModal()">&times;</button>
 
     <div class="modal-body">
       <h2 class="modal-title">Contacto Directo</h2>
-      <p class="modal-subtitle">Déjanos tu correo y nosotros te escribimos.</p>
+      <p class="modal-subtitle">Completa los datos para enviarnos un correo.</p>
 
-      <div class="form-group">
+      <div class="form-container">
+        <input type="text" #userName placeholder="Nombre completo" class="contact-input">
         <input type="email" #userEmail placeholder="tu@correo.com" class="contact-input">
-        <button class="btn-send-email" (click)="sendContact(userEmail.value)">Enviar</button>
+        <textarea #userAsunto placeholder="¿En qué podemos ayudarte?" class="contact-input" rows="3"></textarea>
+
+        <button class="btn-send-email" (click)="sendContact(userName.value, userEmail.value, userAsunto.value)">
+          Enviar por Gmail
+        </button>
       </div>
 
+      <div class="whatsapp-divider">o también</div>
+
       <div class="whatsapp-section">
-        <p>O contacta al Jefe de Carrera vía WhatsApp:</p>
         <a href="https://wa.me/5219721155207" target="_blank" class="whatsapp-link">
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="wa-icon">
           Chatea con nosotros
@@ -82,7 +86,6 @@
     </div>
   </div>
 </div>
-
 
 <div class="news-modal-overlay" *ngIf="selectedNews" (click)="closeNews()">
   <div class="modal-container-styled" (click)="$event.stopPropagation()">

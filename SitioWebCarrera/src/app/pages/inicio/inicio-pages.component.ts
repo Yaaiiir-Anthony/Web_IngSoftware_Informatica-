@@ -189,10 +189,25 @@ toggleContactModal(): void {
   this.isContactModalVisible = !this.isContactModalVisible;
 }
 
-sendContact(email: string): void {
-  console.log('Correo enviado:', email);
-  // Aquí puedes añadir la lógica para procesar el envío
-  alert('¡Gracias! Nos pondremos en contacto pronto.');
+sendContact(nombre: string, email: string, asunto: string): void {
+  if (!nombre || !email || !asunto) {
+    alert('Por favor, completa todos los campos para continuar.');
+    return;
+  }
+
+  const destinatario = 'jefatura_informatica@unistmo.edu.mx';
+
+  // Construimos el cuerpo del mensaje de forma legible
+  const cuerpo = `Hola, mi nombre es: ${nombre}%0D%0AMi correo de contacto: ${email}%0D%0A%0D%0AAsunto:%0D%0A${asunto}`;
+
+  // URL directa de Gmail para redactar (Compose)
+  // view=cm activa el modo "Compose Message"
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${destinatario}&su=${encodeURIComponent(asunto)}&body=${cuerpo}`;
+
+  // Abrir en una nueva pestaña
+  window.open(gmailUrl, '_blank');
+
+  // Cerramos el modal después de abrir la pestaña
   this.toggleContactModal();
 }
 
