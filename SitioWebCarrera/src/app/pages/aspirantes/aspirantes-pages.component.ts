@@ -1,7 +1,7 @@
+
 // Importa el decorador Component desde el núcleo de Angular
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 // Decorador que define la configuración del componente
 @Component({
   // Selector HTML para usar este componente en otras vistas
@@ -9,14 +9,11 @@ import { CommonModule } from '@angular/common';
   selector: 'app-aspirantes-pages',
   standalone: true,            // ✅
   imports: [CommonModule],     // ✅
-
   // Archivo HTML que contiene la vista del componente
   templateUrl: './aspirantes-pages.component.html',
-
   // Archivo(s) CSS que contienen los estilos del componente
   styleUrls: ['./aspirantes-pages.component.css']
 })
-
 
 // Clase del componente
 // Aquí se agrega la lógica, variables y métodos del componente
@@ -38,20 +35,14 @@ export class AspirantesPageComponent {
       generacion: 'Egresado 2020'
     }
   ];
-
   testimonioActivo: any = null;
-
   openTestimonio(testimonio: any) {
     this.testimonioActivo = testimonio;
     document.body.style.overflow = 'hidden';
   }
-
   closeTestimonio() {
     this.testimonioActivo = null;
     document.body.style.overflow = '';
   }
 
-
 }
-
-

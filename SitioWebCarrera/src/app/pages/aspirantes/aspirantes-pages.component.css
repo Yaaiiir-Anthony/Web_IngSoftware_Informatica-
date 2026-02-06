@@ -1,3 +1,4 @@
+
 /* ================= RESET GENERAL ================= */
 * {
   margin: 0;
@@ -5,14 +6,10 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-.header {
-  padding: 30px 10px 30px;
-
 html, body {
   width: 100%;
   overflow-x: hidden;
 }
-
 /* ================= CONTENEDOR ASPIRANTES ================= */
 .aspirantes {
   width: 100%;
@@ -22,15 +19,12 @@ html, body {
   display: block;
   position: relative;
 }
-
 /* ================= TICKER TESTIMONIOS MODERNO ================= */
-
 .testimonios-ticker {
   width: 100%;
   background: linear-gradient(90deg, #f9fafb, #f1f5f9);
   border-bottom: 1px solid #e5e7eb;
 }
-
 .news-ticker-container {
   display: flex;
   align-items: center;
@@ -40,13 +34,11 @@ html, body {
   margin-left: calc(50% - 50vw);
   padding: 10px 0;
 }
-
 /* Aislar transform (importante para el modal, ya aprendido 😄) */
 .news-ticker-container,
 .ticker-move {
   transform: translateZ(0);
 }
-
 /* Etiqueta izquierda */
 .ticker-label {
   background: linear-gradient(135deg, #8b1e1e, #5f0f14);
@@ -61,20 +53,17 @@ html, body {
   margin-left: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
-
 /* Contenedor animado */
 .ticker-wrap {
   overflow: hidden;
   width: 100%;
 }
-
 .ticker-move {
   display: flex;
   gap: 16px;
   width: max-content;
   animation: ticker 35s linear infinite;
 }
-
 /* Tarjeta de testimonio */
 .ticker-item {
   background: #ffffff;
@@ -83,28 +72,23 @@ html, body {
   display: flex;
   align-items: center;
   gap: 14px;
-
   white-space: nowrap;
   cursor: pointer;
-
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
-
 .ticker-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
 }
-
 /* Frase */
 .ticker-item .frase {
   font-size: 15px;
   color: #334155;
   font-style: italic;
 }
-
 /* Autor */
 .ticker-item .autor {
   font-size: 14px;
@@ -112,7 +96,6 @@ html, body {
   color: #8b1e1e;
   margin-left: 8px;
 }
-
 /* Animación */
 @keyframes ticker {
   0% {
@@ -122,36 +105,21 @@ html, body {
     transform: translateX(-50%);
   }
 }
-
 .news-ticker-container:hover .ticker-move {
   animation-play-state: paused;
 }
 
-
 /* ================= HEADER ================= */
-
 .header {
   background-color: #ffffff;
   padding: 30px 16px;
   max-width: auto;
   margin: 0 auto;
 }
-
 .header h1 {
   color: #5f0f14;
-  font-weight: 600;
-  margin-bottom: 20px;
 }
-.proceso-box {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 50px 30px;
-  background-color: #ffffff;
-  border: 1.4px solid #f1dddd;
-  border-radius: 15px;
-}
-  /* ================= PROCESO ================= */
-
+/* ================= PROCESO ================= */
 .proceso-box {
   max-width: 1150px;
   margin: 20px auto;
@@ -160,18 +128,11 @@ html, body {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-  transition: all 0.5s ease;
-}
-.proceso-box:hover {
-  border-color: #da979d;
-  box-shadow: 0 15px 50px rgba(144, 29, 37, 0.05);
 }
 .proceso-box h2 {
   margin-bottom: 30px;
 }
-
 /* ================= PASOS ================= */
-
 .pasos {
   display: flex;
   align-items: center;
@@ -180,16 +141,7 @@ html, body {
   margin-bottom: 40px;
   flex-wrap: wrap;
 }
-.paso-card {
-  width: 100%;
-  background-color: #f9f7f7;
-  border: 1.4px solid #d4a5a9;
-  max-width: 300px;
-  padding: 40px 15px;
-  border-radius: 15px;
-}
 /* ================= PASO CARD ================= */
-
 .paso-card {
   flex: 1;
   max-width: 320px;
@@ -199,64 +151,42 @@ html, body {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-/*aqui!!!!!!!!!*/
-
 .paso-card:hover {
   transform: translateY(-6px);
-  background-color: #ffffff;
-  border-color: #901d25;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
 }
-
 /* ================= ICONO ================= */
-
 .icono-circulo {
   width: 62px;
   height: 62px;
-  margin: 0 auto 20px;
-  background-color: #ffffff;
-  border: 2px solid #901d25;
-  color: #901d25;
+  margin: 0 auto 16px;
+  background-color: #e1e3e8;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 35px;
-  transition: all 0.3s ease;
 }
-.paso-card:hover .icono-circulo {
-  background-color: #901d25;
-}
-
 /* ================= TEXTO PASO ================= */
-
 .paso-card h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  color: #110202;
-  margin-bottom: 12px;
+  color: #111827;
+  margin-bottom: 10px;
 }
-
 .paso-card p {
   font-size: 14px;
-  color: #6b7280;
-  line-height: 1.5;
-}
   color: #4b5563;
 }
-
 /* ================= LINEA CONECTORA ================= */
-
 .linea {
   width: 60px;
   height: 2px;
   background-color: #0b1627;
 }
-
 /* ================= BOTÓN PRINCIPAL ================= */
-
 .btn-principal {
   padding: 14px 38px;
   background-color: #901d25;
@@ -265,68 +195,49 @@ html, body {
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
 }
-
 .btn-principal:hover {
   background-color: #5f0f14;
 }
-
 /* ================= INFO ================= */
-
 .info {
   max-width: 1150px;
   margin: 50px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  padding: 0 20px;
   padding: 0 16px;
 }
 .info-card {
-  background-color: #f3efef;
-  border: 1.4px solid #d4a5a9;
-  padding: 40px 30px;
+  background-color: #e7e6e6;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-.info-card:hover {
-  transform: translateY(-6px);
-  background-color: #ffffff;
-  border-color: #901d25;
-  box-shadow: 0 20px 40px rgba(144, 29, 37, 0.15);
-}
-
 .info-card h3 {
   margin-bottom: 20px;
-  text-align: center;
 }
-.info-card ul {
-  list-style: none;
-}
-
 .info-card ul li {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 12px;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #4b5563;
 }
 .info-card ul li::before {
-  content: "✅";
+  content: "✔";
+  color: #22c55e;
+  font-weight: bold;
 }
-/*FECHAS*/
-
 /* ================= FECHAS ================= */
-
 .fecha {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1.2px solid #901d25;
+  padding: 12px 0;
+  border-bottom: 1px solid #901d25;
+  font-size: 15px;
   color: #4b5563;
-  transition: border-color 0.3s ease;
 }
 .fecha:last-child {
   border-bottom: none;
@@ -335,39 +246,35 @@ html, body {
   font-weight: 600;
   color: #111827;
 }
-/*CTA*/
-
 /* ================= CTA ================= */
-
 .cta {
+  max-width: 1150px;
+  margin: 80px auto 0;
   background-color: #5f0f14;
   color: #ffffff;
   text-align: center;
   padding: 25px 30px;
   border-radius: 10px;
-  margin: 0px auto 80px;
 }
 .cta h2 {
-  margin-bottom: 25px;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 30px;
 }
 .cta p {
   font-size: 16px;
+  max-width: 720px;
   margin: 0 auto 36px;
   line-height: 1.7;
   color: #e5e7eb;
 }
-/*BOTONES CTA*/
-
 /* ================= BOTONES CTA ================= */
-
 .cta-botones {
   display: flex;
-  gap: 20px;
   justify-content: center;
-  margin-top: 20px;
+  gap: 30px;
+  flex-wrap: wrap;
 }
-.btn-cta {
-
 .btn-blanco,
 .btn-outline {
   background-color: #ffffff;
@@ -377,69 +284,32 @@ html, body {
   border: none;
   font-weight: 600;
   cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
 }
-.btn-cta:hover {
-  background-color: #f1dddd;
-}
-
 /* ================= RESPONSIVE ================= */
-
 @media (max-width: 900px) {
   .linea {
     display: none;
   }
 }
-
 @media (max-width: 768px) {
   .info {
     grid-template-columns: 1fr;
   }
-
   .cta h2 {
     font-size: 28px;
   }
 }
-@media (max-width: 768px) {
-  .cta-botones {
-    flex-direction: column;
-    width: 100%;
-    padding: 0 20px;
-  }
-  .btn-cta {
-    width: 100%;
-    text-align: center;
-  }
-  .header h1 {
-    font-size: 28px;
-    padding: 0 15px;
-  }
-  .proceso-box {
-    padding: 30px 15px;
-    margin: 20px 10px;
-  }
-  .paso-card {
-    max-width: 100%;
-  }
-}
-
 
 /* ================= MODAL TESTIMONIOS MODERNO ================= */
-
 .modal {
   position: fixed;
   inset: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: rgba(0, 0, 0, 0.7);
   z-index: 9999;
 }
-
 
 
 
@@ -449,7 +319,6 @@ html, body {
   max-width: 520px;
   width: 90%;
 }
-
 
 /* Tarjeta */
 .modal-content {
@@ -461,7 +330,6 @@ html, body {
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
   animation: modalFadeUp 0.35s ease;
 }
-
 /* Animación */
 @keyframes modalFadeUp {
   from {
@@ -473,7 +341,6 @@ html, body {
     transform: translateY(0) scale(1);
   }
 }
-
 /* Badge superior */
 .modal-content::before {
   content: "Testimonios";
@@ -489,20 +356,17 @@ html, body {
   font-weight: 600;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
-
 /* Header */
 .modal-header {
   border: none;
   padding: 0;
   margin-bottom: 18px;
 }
-
 .modal-title {
   font-size: 22px;
   font-weight: 700;
   color: #0f172a;
 }
-
 /* Botón cerrar */
 .btn-close {
   position: absolute;
@@ -515,17 +379,14 @@ html, body {
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
 }
-
 .btn-close:hover {
   color: #8b1e1e;
   transform: rotate(90deg);
 }
-
 /* Cuerpo */
 .modal-body {
   padding: 0;
 }
-
 /* Frase */
 .modal-body p {
   font-size: 17px;
@@ -534,7 +395,6 @@ html, body {
   margin-bottom: 20px;
   font-style: italic;
 }
-
 /* Separador */
 .modal-body hr {
   border: none;
@@ -542,7 +402,6 @@ html, body {
   background: #e5e7eb;
   margin: 18px 0;
 }
-
 /* Nombre */
 .modal-body h6 {
   font-size: 16px;
@@ -550,10 +409,8 @@ html, body {
   color: #111827;
   margin-bottom: 4px;
 }
-
 /* Generación */
 .modal-body small {
   font-size: 14px;
   color: #6b7280;
-}
 }
