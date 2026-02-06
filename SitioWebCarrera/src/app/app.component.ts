@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TranslateService } from './services/translation.service';
+import { TranslationService } from './services/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { TranslateService } from './services/translation.service';
   template: `<router-outlet></router-outlet>`
 })
 export class AppComponent {
-   constructor(private translate: TranslateService) {
-  this.translate.changeLanguage('español');
+   constructor(public TranslationService: TranslationService) {
+  this.TranslationService.changeLanguage('español');
 }
 }
