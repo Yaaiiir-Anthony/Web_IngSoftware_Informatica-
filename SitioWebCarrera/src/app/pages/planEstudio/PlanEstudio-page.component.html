@@ -1,4 +1,4 @@
-
+﻿
 <!-- ================= PLAN DE ESTUDIOS (SECCIï¿½fï¿½"N AISLADA) ================= -->
 <section class="plan-wrapper">
     <!-- ================= ENCABEZADO ================= -->
@@ -33,9 +33,9 @@
                     [for]="'tab' + (i + 1)"
                     class="tab"
                 >
-                    Semestre {{ i + 1 }}
+                    {{ content().text.semesterLabel }} {{ i + 1 }}
                 </label>
-                <label for="tabop" class="tab">Optativas</label>
+                <label for="tabop" class="tab">{{ content().text.optativasTab }}</label>
 
             </div>
 
@@ -43,7 +43,7 @@
             <ng-container *ngFor="let sem of semesters(); let i = index">
                 <div class="tab-content" [ngClass]="'content-' + (i + 1)">
                     <div class="card-header">
-                        <h2>Materias del Semestre {{ i + 1 }}</h2>
+                        <h2>Materias del {{ content().text.semesterLabel }} {{ i + 1 }}</h2>
                         <a [href]="pdfUrl()" download class="btn-pdf">
                             {{ pdfLabel() }}
                         </a>
@@ -53,7 +53,7 @@
                         <div class="subject" *ngFor="let subj of sem.subjects">
                             <div>
                                 <h3>{{ subj.name }}</h3>
-                                <span>{{ subj.credits }} créditos</span>
+                                <span>{{ subj.credits }} {{ content().text.creditsLabel }}</span>
                             </div>
                             <span class="badge">{{ subj.level }}</span>
                         </div>
@@ -71,7 +71,7 @@
     <div class="subject" *ngFor="let subj of optativas()">
       <div>
         <h3>{{ subj.name }}</h3>
-        <span>{{ subj.credits }} créditos</span>
+        <span>{{ subj.credits }} {{ content().text.creditsLabel }}</span>
       </div>
       <span class="badge">{{ subj.level }}</span>
     </div>
@@ -114,3 +114,5 @@
                 <p>{{ programInfo().modalityText }}</p>
         </div>
 </section>
+
+

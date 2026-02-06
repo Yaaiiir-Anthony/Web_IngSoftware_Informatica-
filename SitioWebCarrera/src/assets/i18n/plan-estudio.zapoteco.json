@@ -1,10 +1,14 @@
-{
+﻿{
   "text": {
     "pageTitle": "Plan de Estudios",
     "pageDescription": "Conoce la estructura curricular de nuestro programa académico, diseñada para brindarte una formación integral y progresiva.",
     "pdfLabel": "Descargar Plan en PDF",
     "optativasTitle": "Materias Optativas",
-    "levelsTitle": "Niveles de Formación"
+    "levelsTitle": "Niveles de Formación",
+    "semesterLabel": "Semestre",
+    "semesterSubjectsTitle": "Materias del Semestre",
+    "optativasTab": "Optativas",
+    "creditsLabel": "créditos"
   },
   "pdfUrl": "assets/pdf/PlanEstudios.pdf",
   "semesters": [

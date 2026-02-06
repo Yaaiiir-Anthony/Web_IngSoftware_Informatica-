@@ -1,10 +1,14 @@
-{
+﻿{
   "text": {
     "pageTitle": "Study Plan",
     "pageDescription": "Explore the curriculum structure of our academic program, designed to provide comprehensive and progressive training.",
     "pdfLabel": "Download Plan PDF",
     "optativasTitle": "Elective Courses",
-    "levelsTitle": "Training Levels"
+    "levelsTitle": "Training Levels",
+    "semesterLabel": "Semester",
+    "semesterSubjectsTitle": "Subjects for Semester",
+    "optativasTab": "Electives",
+    "creditsLabel": "credits"
   },
   "pdfUrl": "assets/pdf/PlanEstudios.pdf",
   "semesters": [
@@ -113,3 +117,5 @@
     "modalityText": "On-campus format with practical activities in specialized labs and real-world projects."
   }
 }
+
+
