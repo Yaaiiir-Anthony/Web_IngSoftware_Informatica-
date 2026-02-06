@@ -1,11 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({
+  providedIn: 'root'
+})
 export class TranslateService {
 
   private currentLang = 'español';
   private translations: any = {};
+
+  private langChanged = new BehaviorSubject<string>(this.currentLang);
+  langChanged$ = this.langChanged.asObservable();
+
+  constructor() {
+    const savedLang = localStorage.getItem('lang');
+    this.changeLanguage(savedLang || this.currentLang);
+  }
 
   getCurrentLang(): string {
     return this.currentLang;
@@ -13,10 +23,15 @@ export class TranslateService {
 
   changeLanguage(lang: string) {
     this.currentLang = lang;
+    localStorage.setItem('lang', lang);
 
-    fetch(`assets/i18n/${lang}.json`)
+    fetch(`assets/i18n/${lang}/${lang}.json`)
       .then(res => res.json())
-      .then(data => this.translations = data);
+      .then(data => {
+        this.translations = data;
+        this.langChanged.next(lang); // 🔥 Notifica a toda la app
+      })
+      .catch(() => console.error('Error cargando idioma:', lang));
   }
 
   translate(key: string): string {

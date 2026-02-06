@@ -1,9 +1,9 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener, inject, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { TranslateService } from '../../../services/translation.service';
-import { TranslatePipe } from '../../../pipes/translate.pipe';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navbar-shared',
@@ -12,20 +12,30 @@ import { TranslatePipe } from '../../../pipes/translate.pipe';
   templateUrl: './navbar-shared.component.html',
   styleUrls: ['./navbar-shared.component.css']
 })
-export class NavbarSharedComponent {
+export class NavbarSharedComponent implements OnInit, OnDestroy {
 
   translateService = inject(TranslateService);
+  private langSub!: Subscription;
+
   isScrolled = false;
 
   constructor(private router: Router) {
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
-        const navbar = document.getElementById('navbarInstitucional');
+        const navbar = document.getElementById('navbarContenido');
         if (navbar?.classList.contains('show')) {
           navbar.classList.remove('show');
         }
       });
+  }
+
+  ngOnInit() {
+    this.langSub = this.translateService.langChanged$.subscribe(() => {});
+  }
+
+  ngOnDestroy() {
+    this.langSub.unsubscribe();
   }
 
   cambiarIdioma(lang: string) {

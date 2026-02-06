@@ -84,26 +84,34 @@
             🌐 Idioma
           </a>
 
-          <button
-          class="dropdown-item"
-          (click)="cambiarIdioma('español')"
-          [class.active-idioma]="idiomaActual() === 'español'">
-          🇲🇽 Español
-        </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="idiomaDropdown">
+            <li>
+              <button
+                class="dropdown-item"
+                (click)="cambiarIdioma('español')"
+                [class.active-idioma]="idiomaActual() === 'español'">
+                🇲🇽 Español
+              </button>
+            </li>
 
-        <button
-          class="dropdown-item"
-          (click)="cambiarIdioma('zapoteco')"
-          [class.active-idioma]="idiomaActual() === 'zapoteco'">
-          🧡 Zapoteco
-        </button>
+            <li>
+              <button
+                class="dropdown-item"
+                (click)="cambiarIdioma('zapoteco')"
+                [class.active-idioma]="idiomaActual() === 'zapoteco'">
+                🧡 Zapoteco
+              </button>
+            </li>
 
-        <button
-          class="dropdown-item"
-          (click)="cambiarIdioma('english')"
-          [class.active-idioma]="idiomaActual() === 'english'">
-          🇺🇸 English
-        </button>
+            <li>
+              <button
+                class="dropdown-item"
+                (click)="cambiarIdioma('english')"
+                [class.active-idioma]="idiomaActual() === 'english'">
+                🇺🇸 English
+              </button>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>

@@ -1,14 +1,15 @@
 {
   "MENU": {
-    "HOME": "Ruzulu'",
-    "ABOUT": "¿Tu laadu'?",
-    "STUDY_PLAN": "Ni' rusiidi' du'",
-    "PROJECTS": "Dxiiña' huayuniidu'",
-    "TEACHERS": "Binni ni' rusiidi'",
-    "APPLICANTS": "Ni' rului'la'dxi chu'",
-    "LANGUAGE": "Diidxa'",
-    "NEWS": "Diidxa' cubi'"
+    "HOME": "Xquidxe",
+    "ABOUT": "Diidxazá",
+    "STUDY_PLAN": "Guendaróo",
+    "PROJECTS": "Xtiidxa",
+    "TEACHERS": "Binnigula’sa",
+    "APPLICANTS": "Binni guendaróo",
+    "NEWS": "Diidxa cubi",
+    "LANGUAGE": "Diidxa"
   },
+
   "HOME": {
     "HERO": {
       "TITLE": "Ingeniería de Software",
