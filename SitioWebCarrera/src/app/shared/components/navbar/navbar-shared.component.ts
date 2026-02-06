@@ -2,7 +2,7 @@ import { Component, HostListener, inject, OnInit, OnDestroy } from '@angular/cor
 import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
-import { TranslateService } from '../../../services/translation.service';
+import { TranslationService } from '../../../services/translation.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -12,10 +12,12 @@ import { Subscription } from 'rxjs';
   templateUrl: './navbar-shared.component.html',
   styleUrls: ['./navbar-shared.component.css']
 })
-export class NavbarSharedComponent implements OnInit, OnDestroy {
+export class NavbarSharedComponent {
+public service = inject ( TranslationService ); // Pú blico para usar en HTML
+  cambiarIdioma ( lang : string ) {
+   this . service . changeLanguage ( lang );
+}
 
-  translateService = inject(TranslateService);
-  private langSub!: Subscription;
 
   isScrolled = false;
 
@@ -29,23 +31,6 @@ export class NavbarSharedComponent implements OnInit, OnDestroy {
         }
       });
   }
-
-  ngOnInit() {
-    this.langSub = this.translateService.langChanged$.subscribe(() => {});
-  }
-
-  ngOnDestroy() {
-    this.langSub.unsubscribe();
-  }
-
-  cambiarIdioma(lang: string) {
-    this.translateService.changeLanguage(lang);
-  }
-
-  idiomaActual(): string {
-    return this.translateService.getCurrentLang();
-  }
-
   isActive(path: string): boolean {
     const currentRoute = this.router.url;
 

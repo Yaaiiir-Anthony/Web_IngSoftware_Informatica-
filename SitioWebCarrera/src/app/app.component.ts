@@ -1,7 +1,7 @@
 ﻿import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TranslationService } from './services/translation.service';
 import { ChatbotComponent } from './shared/components/chatbot/chatbot.component';
-import { TranslateService } from './services/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ import { TranslateService } from './services/translation.service';
   `
 })
 export class AppComponent {
-  constructor(private translate: TranslateService) {
-    this.translate.changeLanguage('español');
-  }
+   constructor(public TranslationService: TranslationService) {
+  this.TranslationService.changeLanguage('español');
+}
 }

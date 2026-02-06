@@ -1,40 +1,39 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable , signal , inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-@Injectable({
-  providedIn: 'root'
+@Injectable ({
+providedIn : 'root'
 })
-export class TranslateService {
+ export class TranslationService {
+ public http = inject ( HttpClient );
 
-  public currentLang = 'español';
-  public translations: any = {};
+ // Signal del idioma actual
+ currentLang = signal < string >( 'es ');
 
-  private langChanged = new BehaviorSubject<string>(this.currentLang);
-  langChanged$ = this.langChanged.asObservable();
+ // Signal con la data cruda del JSON
+ public translationsData = signal <any >({}) ;
 
-  constructor() {
-    const savedLang = localStorage.getItem('lang');
-    this.changeLanguage(savedLang || this.currentLang);
-  }
+ constructor () {
+ this . loadTranslations ('es ');
 
-  getCurrentLang(): string {
-    return this.currentLang;
-  }
+ }
 
-  changeLanguage(lang: string) {
-    this.currentLang = lang;
-    localStorage.setItem('lang', lang);
+ changeLanguage ( lang : string ) {
+ this . currentLang .set( lang );
+ this . loadTranslations ( lang );
+ }
 
-    fetch(`assets/i18n/${lang}/${lang}.json`)
-      .then(res => res.json())
-      .then(data => {
-        this.translations = data;
-        this.langChanged.next(lang); // 🔥 Notifica a toda la app
-      })
-      .catch(() => console.error('Error cargando idioma:', lang));
-  }
+ public loadTranslations ( lang : string ) {
+ this . http .get(' assets / i18n /${ lang }. json '). subscribe ({
+ next : ( data ) => this . translationsData .set( data ),
+ error : () => console . error (' Error cargando idioma : ${ lang }')
+ });
+ }
 
-  translate(key: string): string {
-    return key.split('.').reduce((obj, k) => obj?.[k], this.translations) || key;
-  }
-}
+ // FUNCIÓN CLAVE : Traduce buscando la ruta " HOME . TITLE " dentro del JSON
+ translate (key: string ): string {
+ const data = this . translationsData ();
+ // Reduce recorre el objeto : data [’ HOME ’] -> data [’ TITLE ’]
+ return key. split ('.'). reduce ((o, i) => o ? o[i] : null , data ) || key;
+ }
+ }

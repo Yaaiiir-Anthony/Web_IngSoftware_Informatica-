@@ -1,13 +1,11 @@
+
 <!-- ================= TESTIMONIOS TICKER ================= -->
 <div class="news-ticker-container testimonios-ticker">
-
   <div class="ticker-label">
     TESTIMONIOS
   </div>
-
   <div class="ticker-wrap">
     <div class="ticker-move">
-
       <div
         class="ticker-item"
         *ngFor="let testimonio of testimonios"
@@ -16,7 +14,6 @@
         <span class="frase">“{{ testimonio.frase }}”</span>
         <strong class="autor">{{ testimonio.nombre }}</strong>
       </div>
-
       <!-- duplicado -->
       <div
         class="ticker-item"
@@ -26,12 +23,9 @@
         <span class="frase">“{{ testimonio.frase }}”</span>
         <strong class="autor">{{ testimonio.nombre }}</strong>
       </div>
-
     </div>
   </div>
-
 </div>
-
 
 <section class="aspirantes">
   <!-- HEADER -->
@@ -42,38 +36,30 @@
       admisión y los requisitos para formar parte de nuestra comunidad universitaria.
     </p>
   </header>
-
  <!-- PROCESO -->
 <section class="proceso-box">
   <h2>Proceso de Admisión</h2>
-
   <div class="pasos">
-
     <div class="paso-card">
       <div class="icono-circulo">📝</div>
       <span class="paso-num">Paso 1</span>
       <h3>Solicita tu Ficha</h3>
       <p>Completa el formulario de registro en línea y obtén tu ficha de admisión.</p>
     </div>
-
     <div class="linea"></div>
-
     <div class="paso-card">
       <div class="icono-circulo">✍️</div>
       <span class="paso-num">Paso 2</span>
       <h3>Presenta tu Examen</h3>
       <p>Realiza el examen de admisión en la fecha y hora asignadas.</p>
     </div>
-
     <div class="linea"></div>
-
     <div class="paso-card">
       <div class="icono-circulo">🎓</div>
       <span class="paso-num">Paso 3</span>
       <h3>Inscríbete</h3>
       <p>Si apruebas, completa tu inscripción y comienza tu carrera universitaria.</p>
     </div>
-
   </div>
 <a
   class="btn-principal"
@@ -84,10 +70,8 @@
   Iniciar registro
 </a>
 </section>
-
   <!-- INFO -->
   <section class="info">
-
     <div class="info-card">
       <h3>Requisitos de Admisión</h3>
       <ul>
@@ -98,57 +82,43 @@
         <li>Comprobante de domicilio</li>
       </ul>
     </div>
-
     <div class="info-card">
       <h3>Fechas Importantes</h3>
-
       <div class="fecha">
         <strong>Registro en Línea</strong>
         <span>Enero - Junio 2026</span>
       </div>
-
       <div class="fecha">
         <strong>Examen de Admisión</strong>
         <span>15 de Julio 2026</span>
       </div>
-
       <div class="fecha">
         <strong>Publicación de Resultados</strong>
         <span>25 de Julio 2026</span>
       </div>
-
       <div class="fecha">
         <strong>Inscripciones</strong>
         <span>1 - 15 de Agosto 2026</span>
       </div>
     </div>
-
   </section>
-
   <!-- CTA -->
- <section class="cta">
-  <h2>¿Necesitas más información?</h2>
-  <p>
-    Nuestro equipo de atención a aspirantes está listo para resolver todas tus
-    dudas sobre el proceso de admisión.
-  </p>
-
-  <div class="cta-botones">
-    <a href="https://www.unistmo.edu.mx/web/p_ensenanza/ingreso/FORMATO_SOLICITUD_FICHA_LICENCIATURA.pdf"
-       class="btn-cta">
-      Contactar Admisiones
-    </a>
-
-    <a href="https://www.unistmo.edu.mx/web/p_ensenanza/ingreso/FORMATO_SOLICITUD_FICHA_LICENCIATURA.pdf"
-       class="btn-cta"
-       target="_blank">
-      Descargar Guía
-    </a>
-  </div>
+  <section class="cta">
+    <h2>¿Necesitas más información?</h2>
+    <p>
+      Nuestro equipo de atención a aspirantes está listo para resolver todas tus
+      dudas sobre el proceso de admisión.
+    </p>
+<div class="cta-botones">
+  <a href="https://www.unistmo.edu.mx/web/p_ensenanza/ingreso/FORMATO_SOLICITUD_FICHA_LICENCIATURA.pdf" class="btn-cta">
+    Contactar Admisiones
+  </a>
+  <a href="https://www.unistmo.edu.mx/web/p_ensenanza/ingreso/FORMATO_SOLICITUD_FICHA_LICENCIATURA.pdf" class="btn-cta" target="_blank">
+    Descargar Guía
+  </a>
+</div>
+  </section>
 </section>
-
-</section>
-
 
 
 
@@ -159,25 +129,20 @@
   (click)="closeTestimonio()"
 >
 
-
   <div
     class="modal-dialog"
     (click)="$event.stopPropagation()"
   >
     <div class="modal-content rounded-4 p-4">
-
       <div class="modal-header border-0">
         <h5 class="modal-title">Testimonio de Egresado</h5>
         <button class="btn-close" (click)="closeTestimonio()"></button>
       </div>
-
       <div class="modal-body">
         <p class="fst-italic fs-5">
           “{{ testimonioActivo.frase }}”
         </p>
-
         <hr>
-
         <h6 class="fw-bold mb-0">
           {{ testimonioActivo.nombre }}
         </h6>
@@ -185,8 +150,6 @@
           {{ testimonioActivo.generacion }}
         </small>
       </div>
-
     </div>
   </div>
 </div>
-
