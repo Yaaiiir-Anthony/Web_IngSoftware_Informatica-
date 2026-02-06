@@ -70,7 +70,7 @@ export class DocentesPageComponent {
       nombre: 'Dr. Luis David Huerta Hernández',
       especialidad: 'Dr. En Sistemas Computacionales',
       cargo: 'Profesor Investigador Asociado C, Jefe de carrera de la Licenciatura en Informática, Comité del servicio de la cafetería UNISTMO y Vocal en el comité de adquisiciones de la UNISTMO',
-      imagen: 'assets/docente3.png',
+      imagen: 'assets/img/Luis.jpg',
       descripcion: 'Reconocimiento de Patrones.',
       email: 'ldhuerth@gmail.com, luisdh2@bianni.unistmo.edu.mx',
       publicaciones: [
@@ -139,7 +139,7 @@ export class DocentesPageComponent {
       nombre: 'M. en C. Cosijopii García García',
       especialidad: 'Maestría en ciencias en el área de ciencias computacionales',
       cargo: 'Profesor Asociado B asignado a la licenciatura en Informática Universidad del Istmo Campus Ixtepec. [Oct 2024 - Presente]',
-      imagen: 'assets/docente6.png',
+      imagen: 'assets/img/Cosijopi.jpg',
       descripcion: 'Optimización Multiobjetivo.',
       email: 'cosijopii@bianni.unistmo.edu.mx',
       publicaciones: [
@@ -158,7 +158,7 @@ export class DocentesPageComponent {
       nombre: 'M. en C. Oscar Alonso de la Rosa Aguilar',
       especialidad: 'Maestría en Ciencias de la Computación',
       cargo: 'Profesor-Investigador de tiempo completo.',
-      imagen: 'assets/docente6.png',
+      imagen: 'assets/img/Oscar.jpg',
       descripcion: 'Análisis de datos.',
       email: 'odelarosa@bianni.unistmo.edu.mx',
       publicaciones: [
