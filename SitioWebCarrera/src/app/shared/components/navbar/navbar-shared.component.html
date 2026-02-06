@@ -22,7 +22,7 @@
 
     <!-- Menú -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarInstitucional">
-    <ul class="navbar-nav align-items-lg-center gap-lg-4">
+      <ul class="navbar-nav align-items-lg-center gap-lg-4">
 
         <li class="nav-item">
           <a class="btn btn-institucional"
@@ -71,30 +71,49 @@
             Aspirantes
           </a>
         </li>
-        <li>
-          <div class="idiomas">
-            <button
-              (click)="cambiarIdioma('es')"
-              [class.active]="translateService.currentLang === 'es'">
-              Español
-            </button>
 
-            <button
-              class="dropdown-item"
-              (click)="cambiarIdioma('zapoteco')"
-              [class.active-idioma]="idiomaActual() === 'zapoteco'">
-              🧡 Zapoteco
-            </button>
+        <!-- 🌐 MENÚ IDIOMA -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="idiomaDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            🌐 Idioma
+          </a>
 
-            <button
-              class="dropdown-item"
-              (click)="cambiarIdioma('english')"
-              [class.active-idioma]="idiomaActual() === 'english'">
-              🇺🇸 English
-            </button>
-           </div>
-         </li>
-    </ul>
-   </div>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="idiomaDropdown">
+            <li>
+              <button
+                class="dropdown-item"
+                (click)="cambiarIdioma('español')"
+                [class.active-idioma]="idiomaActual() === 'español'">
+                Español 🇲🇽
+              </button>
+            </li>
+
+            <li>
+              <button
+                class="dropdown-item"
+                (click)="cambiarIdioma('zapoteco')"
+                [class.active-idioma]="idiomaActual() === 'zapoteco'">
+                Zapoteco
+              </button>
+            </li>
+
+            <li>
+              <button
+                class="dropdown-item"
+                (click)="cambiarIdioma('english')"
+                [class.active-idioma]="idiomaActual() === 'english'">
+                🇺🇸 English
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

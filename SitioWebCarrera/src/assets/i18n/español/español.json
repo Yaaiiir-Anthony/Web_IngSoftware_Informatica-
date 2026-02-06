@@ -1,15 +1,15 @@
 {
   "MENU": {
     "HOME": "Inicio",
-    "ABOUT": "¿Quiénes Somos?",
-    "STUDY_PLAN": "Plan de Estudios",
+    "ABOUT": "Nosotros",
+    "STUDY_PLAN": "Plan de estudios",
     "PROJECTS": "Proyectos",
     "TEACHERS": "Docentes",
     "APPLICANTS": "Aspirantes",
-    "LANGUAGE": "Idioma",
-    "NEWS": "Noticias"
+    "NEWS": "Noticias",
+    "LANGUAGE": "Idioma"
   },
-  "HOME": {
+"HOME": {
     "HERO": {
       "TITLE": "Ingeniería de Software",
       "SUBTITLE": "El futuro es hoy"
