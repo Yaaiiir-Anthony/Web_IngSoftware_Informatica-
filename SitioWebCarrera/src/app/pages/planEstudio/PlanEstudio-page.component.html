@@ -45,7 +45,7 @@
                     <div class="card-header">
                         <h2>Materias del Semestre {{ i + 1 }}</h2>
                         <a [href]="pdfUrl()" download class="btn-pdf">
-                            Descargar Plan en PDF
+                            {{ pdfLabel() }}
                         </a>
                     </div>
 
@@ -64,7 +64,7 @@
             <!-- ================= CONTENIDO OPTATIVAS ================= -->
 <div class="tab-content content-optativas">
   <div class="card-header">
-    <h2>Materias Optativas</h2>
+    <h2>{{ optativasTitle() }}</h2>
   </div>
 
   <div class="subjects">
@@ -82,7 +82,7 @@
 </div>
         <!-- ================= NIVELES DE FORMACIÓN ================= -->
         <section class="card">
-            <h2>Niveles de Formación</h2>
+            <h2>{{ levelsTitle() }}</h2>
 
             <!-- Contenedor de niveles -->
             <div class="levels">
