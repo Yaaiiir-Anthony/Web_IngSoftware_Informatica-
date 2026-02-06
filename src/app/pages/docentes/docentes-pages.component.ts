@@ -186,6 +186,7 @@ export class DocentesPageComponent {
       ]
     }
   ]);
+  
   /**
    * Abre el modal asignando el docente seleccionado
    */
