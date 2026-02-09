@@ -1,4 +1,6 @@
+
 ﻿import { Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 // Interfaz para las publicaciones científicas
 interface Publicacion {
